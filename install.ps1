@@ -1,8 +1,8 @@
 # TermAI - Installateur Windows (PowerShell)
-# Usage: irm https://raw.githubusercontent.com/NikoStano/termai-releases/main/install.ps1 | iex
+# Usage: irm https://raw.githubusercontent.com/Quantum-Shift-app/termai-releases/main/install.ps1 | iex
 $ErrorActionPreference = "Stop"
 
-$Repo = "NikoStano/termai-releases"
+$Repo = "Quantum-Shift-app/termai-releases"
 $AppName = "termai"
 
 # ---------- Détection Architecture ----------
@@ -19,9 +19,17 @@ function Get-Arch {
 function Get-LatestVersion {
     try {
         $release = Invoke-RestMethod -Uri "https://api.github.com/repos/$Repo/releases/latest" -UseBasicParsing
-        return $release.tag_name
+        if ($release -and $release.tag_name) {
+            return $release.tag_name
+        }
+        throw "Aucune release trouvée"
     } catch {
-        Write-Error "Impossible de récupérer la dernière version. Vérifiez que le repo $Repo a des releases."
+        Write-Error "Impossible de récupérer la dernière version depuis le repo $Repo."
+        Write-Host ""
+        Write-Host "Solutions:" -ForegroundColor Yellow
+        Write-Host "  1. Vérifiez que le repo GitHub $Repo existe"
+        Write-Host "  2. Vérifiez votre connexion internet"
+        Write-Host "  3. Téléchargez manuellement depuis: https://github.com/$Repo/releases"
         exit 1
     }
 }

@@ -1,9 +1,9 @@
 #!/bin/sh
 # TermAI - Installateur Linux/macOS via curl
-# Usage: curl -fsSL https://raw.githubusercontent.com/NikoStano/termai-releases/main/install.sh | sh
+# Usage: curl -fsSL https://raw.githubusercontent.com/Quantum-Shift-app/termai-releases/main/install.sh | sh
 set -e
 
-REPO="NikoStano/termai-releases"
+REPO="Quantum-Shift-app/termai-releases"
 APP_NAME="termai"
 VERSION=""
 INSTALL_DIR="/usr/local/bin"
@@ -32,8 +32,12 @@ get_latest_version() {
     | grep '"tag_name"' | head -1 | sed 's/.*"tag_name": *"//;s/".*//')
 
   if [ -z "$VERSION" ]; then
-    echo "Erreur: impossible de récupérer la dernière version."
-    echo "Vérifiez que le repo ${REPO} a des releases GitHub."
+    echo "Erreur: impossible de récupérer la dernière version depuis le repo ${REPO}."
+    echo ""
+    echo "Solutions:"
+    echo "  1. Vérifiez que le repo GitHub ${REPO} existe"
+    echo "  2. Vérifiez votre connexion internet"
+    echo "  3. Téléchargez manuellement depuis: https://github.com/${REPO}/releases"
     exit 1
   fi
 }
@@ -127,13 +131,13 @@ install_macos_app() {
     <key>CFBundleExecutable</key>
     <string>termai</string>
     <key>CFBundleIdentifier</key>
-    <string>com.nikostano.termai</string>
+    <string>com.Quantum-Shift-app.termai</string>
     <key>CFBundleName</key>
     <string>TermAI</string>
     <key>CFBundleVersion</key>
-    <string>1.0.0</string>
+    <string>1.0.1</string>
     <key>CFBundleShortVersionString</key>
-    <string>1.0.0</string>
+    <string>1.0.1</string>
     <key>LSMinimumSystemVersion</key>
     <string>11.0</string>
     <key>NSHighResolutionCapable</key>
