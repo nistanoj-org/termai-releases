@@ -1,0 +1,81 @@
+TERMAI — CONTRAT DE LICENCE LOGICIEL ET CONDITIONS D'UTILISATION
+Copyright (c) 2026 Nikola Stanojevic. Tous droits réservés.
+
+1. OBJET
+Ce logiciel, incluant son code source, son architecture, ses algorithmes
+d'intelligence artificielle et ses interfaces graphiques
+(ci-après le "Logiciel"), est la propriété exclusive de Nikola Stanojevic.
+
+Les droits d'auteur sur ce Logiciel sont protégés conformément au Code de la
+propriété intellectuelle français (CPI) pour une durée de 70 ans à compter
+du décès de l'auteur.
+
+2. RESTRICTIONS D'UTILISATION (PROPRIÉTAIRE & FERMÉ)
+Toute utilisation, copie, modification, distribution, sous-licence ou vente
+de tout ou partie du code source de ce Logiciel est STRICTEMENT INTERDITE
+sans un accord commercial écrit et signé par l'auteur.
+
+Il est expressément interdit de :
+a) Copier ou cloner ce dépôt à des fins autres que le développement autorisé
+   par le propriétaire.
+
+b) Faire de l'ingénierie inverse (Reverse Engineering), décompiler ou
+   désassembler le Logiciel.
+
+c) Utiliser des parties du code (snippets), notamment les modules SSH,
+   d'intelligence artificielle ou d'analyse de commandes, dans d'autres
+   projets.
+
+d) Contourner les mécanismes de protection, d'authentification ou de
+   gestion des licences.
+
+3. PROPRIÉTÉ INTELLECTUELLE
+Le nom "TermAI", les logos, et l'ensemble du code sont protégés par les lois
+sur la propriété intellectuelle et le droit d'auteur. Ce projet n'est PAS un
+logiciel libre (Open Source).
+
+4. EXCLUSION DE GARANTIE ET DE RESPONSABILITÉ
+Le Logiciel est fourni "TEL QUEL" ("AS IS"), sans garantie d'aucune sorte,
+expresse ou implicite, incluant mais sans s'y limiter les garanties de
+qualité marchande, d'adéquation à un usage particulier et d'absence de
+contrefaçon.
+
+L'auteur ne saurait en aucun cas être tenu responsable de tout dommage
+direct, indirect, accessoire, spécial, consécutif ou exemplaire, incluant
+mais sans s'y limiter :
+a) Les pertes de données ou de fichiers sur les serveurs distants.
+b) Les interruptions de service ou dysfonctionnements réseau.
+c) Les accès non autorisés résultant de configurations utilisateur.
+d) Les pertes financières liées à l'utilisation du Logiciel.
+e) Les dommages résultant de commandes exécutées via le terminal ou
+   suggérées par le module d'intelligence artificielle intégré.
+
+L'utilisateur reconnaît et accepte que :
+- Les commandes exécutées via TermAI sont de sa seule responsabilité.
+- Les suggestions de l'intelligence artificielle intégrée sont fournies à
+  titre indicatif et ne constituent en aucun cas des recommandations
+  garanties. L'utilisateur est seul responsable de leur exécution.
+- La connexion à des serveurs distants via SSH est effectuée sous la
+  responsabilité exclusive de l'utilisateur, qui garantit disposer des
+  autorisations nécessaires.
+
+5. DONNÉES ET CONFIDENTIALITÉ
+Le Logiciel ne collecte aucune donnée personnelle de manière autonome.
+Les clés API fournies par l'utilisateur sont stockées localement dans le
+trousseau de clés du système d'exploitation et ne sont jamais transmises
+à des tiers. Les logs de commandes envoyés à l'IA intégrée sont anonymisés
+(adresses IP, emails et tokens sont automatiquement masqués).
+
+L'utilisateur est responsable de la sécurité de ses propres identifiants
+SSH et clés API.
+
+6. INFRACTIONS
+Tout accès non autorisé ou violation de cette licence fera l'objet de
+poursuites judiciaires immédiates conformément au droit applicable.
+
+7. LOI APPLICABLE
+Cette licence est régie par le droit français. Tout litige sera soumis aux
+tribunaux compétents de Paris, France.
+
+POUR TOUTE DEMANDE COMMERCIALE OU PARTENARIAT :
+Contactez l'administrateur du dépôt.
