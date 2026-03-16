@@ -9,18 +9,18 @@ TermAI est un client SSH de nouvelle génération avec intelligence artificielle
 ### Linux / macOS
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/NikoStano/termai-releases/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/Quantum-Shift-app/termai-releases/main/install.sh | sh
 ```
 
 ### Windows (PowerShell)
 
 ```powershell
-irm https://raw.githubusercontent.com/NikoStano/termai-releases/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/Quantum-Shift-app/termai-releases/main/install.ps1 | iex
 ```
 
 ### Téléchargement direct
 
-Rendez-vous sur la [page Releases](https://github.com/NikoStano/termai-releases/releases/latest) pour télécharger le binaire adapté à votre plateforme :
+Rendez-vous sur la [page Releases](https://github.com/Quantum-Shift-app/termai-releases/releases/latest) pour télécharger le binaire adapté à votre plateforme :
 
 | Plateforme          | Fichier                          |
 |---------------------|----------------------------------|
