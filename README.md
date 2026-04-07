@@ -1,8 +1,9 @@
 # TermAI - Le Client SSH augmenté avec l'IA
 
-[![Version](https://img.shields.io/badge/version-1.0.3-blue)](https://github.com/Quantum-Shift-app/termai/releases/tag/v1.0.3)  
-[![Tests](https://img.shields.io/badge/tests-59%2F59-green)]()  
-[![Audit](https://img.shields.io/badge/audit-A%20(92%2F100)-brightgreen)]()  
+[![Version](https://img.shields.io/badge/version-1.1.3-blue)](https://github.com/NikoStano/termai/releases)  
+[![Tests](https://img.shields.io/badge/tests-444%2F444-green)]()  
+[![Build](https://img.shields.io/badge/build-passing-brightgreen)]()  
+[![License](https://img.shields.io/badge/license-MIT-blue)](#license)
 
 TermAI est un client SSH de nouvelle génération sous forme d'application bureau native. Il combine la puissance de **Go**, l'interface fluide de **React/TypeScript**, et intègre directement les modèles d'Intelligence Artificielle (locaux via Ollama ou distants via OpenAI/Anthropic) pour assister vos opérations SysAdmin.
 
