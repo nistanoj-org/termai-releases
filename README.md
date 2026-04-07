@@ -18,22 +18,19 @@ Production-Ready (100% complet - v1.0.3) - Tous les audits de sécurité passés
 ### Linux / macOS
 
 ```bash
-curl -fsSL
-https://raw.githubusercontent.com/Quantum-Shift-app/termai-releases/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/Quantum-Shift-app/termai-releases/main/install.sh | sh
 ```
 
 ### Windows (PowerShell)
 
 ```powershell
-irm
-https://raw.githubusercontent.com/Quantum-Shift-app/termai-releases/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/Quantum-Shift-app/termai-releases/main/install.ps1 | iex
 ```
 
 ### Windows (Command Prompt)
 
 ```cmd
-powershell -Command "irm
-https://raw.githubusercontent.com/Quantum-Shift-app/termai-releases/main/install.ps1 | iex"
+powershell -Command "irm https://raw.githubusercontent.com/Quantum-Shift-app/termai-releases/main/install.ps1 | iex"
 ```
 
 ### Téléchargement direct
