@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download TermAI</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #3b82f6;
+            --accent-hover: #2563eb;
+            --border: #334155;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .hero { margin-bottom: 2rem; }
+        .hero h1 { font-size: 3.5rem; margin: 0; letter-spacing: -1px; }
+        .hero p { font-size: 1.2rem; color: var(--text-muted); }
+        
+        .download-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 3rem;
+            max-width: 500px;
+            width: 90%;
+        }
+        .btn-main {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.39);
+        }
+        .btn-main:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+        .sub-text {
+            display: block;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        
+        .other-os {
+            margin-top: 3rem;
+            border-top: 1px solid var(--border);
+            padding-top: 2rem;
+        }
+        .other-os h3 { color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+        .os-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .os-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        .os-links a:hover { background: rgba(255, 255, 255, 0.1); color: var(--text-main); }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>TermAI</h1>
+        <p>The Hybrid AI-Augmented Terminal</p>
+    </div>
+
+    <div class="download-box">
+        <a id="main-download-btn" class="btn-main" href="#">Detecting your OS...</a>
+        <span id="sub-text" class="sub-text">Checking system requirements...</span>
+    </div>
+
+    <div class="other-os">
+        <h3>Download for other platforms</h3>
+        <div class="os-links">
+            <a href="https://github.com/nistanoj-org/termai-releases/releases/latest/download/termai-windows-amd64.exe">Windows (.exe)</a>
+            <a href="https://github.com/nistanoj-org/termai-releases/releases/latest/download/termai-macos-arm64.dmg">Mac (Apple Silicon)</a>
+            <a href="https://github.com/nistanoj-org/termai-releases/releases/latest/download/termai-macos-amd64.dmg">Mac (Intel)</a>
+            <a href="https://github.com/nistanoj-org/termai-releases/releases/latest/download/termai-linux-amd64.deb">Linux (.deb)</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Remplacer ces URLs par les vrais chemins vers tes releases GitHub !
+            const RELEASES = {
+                windows: "https://github.com/nistanoj-org/termai-releases/releases/latest/download/termai-windows-amd64.exe",
+                macSilicon: "https://github.com/nistanoj-org/termai-releases/releases/latest/download/termai-macos-arm64.dmg",
+                macIntel: "https://github.com/nistanoj-org/termai-releases/releases/latest/download/termai-macos-amd64.dmg",
+                linux: "https://github.com/nistanoj-org/termai-releases/releases/latest/download/termai-linux-amd64.deb"
+            };
+
+            const btn = document.getElementById("main-download-btn");
+            const sub = document.getElementById("sub-text");
+            
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            const platform = navigator.platform || "";
+
+            let os = "Unknown";
+            let link = "#";
+            let btnText = "View All Downloads";
+            let subText = "Select your operating system below.";
+
+            // Détection Windows
+            if (/windows phone/i.test(userAgent) || /win/i.test(platform)) {
+                os = "Windows";
+                link = RELEASES.windows;
+                btnText = "Download for Windows";
+                subText = "Windows 10/11 (64-bit) • .exe installer";
+            } 
+            // Détection macOS
+            else if (/mac/i.test(platform)) {
+                os = "macOS";
+                // Heuristique pour détecter Apple Silicon (M1/M2/M3/M4) via les APIs récentes
+                // Note: La détection 100% fiable d'Apple Silicon via JS est impossible, 
+                // mais on peut assumer Silicon par défaut pour les navigateurs récents
+                const isSilicon = navigator.userAgentData?.architecture === "arm" || navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1; // maxTouchPoints trick pour Safari mobile
+                
+                if (isSilicon || userAgent.includes("Mac OS X 10_15_7")) { 
+                    // macOS Big Sur et supérieur masquent souvent l'architecture exacte, on parie sur M-Series aujourd'hui
+                    link = RELEASES.macSilicon;
+                    btnText = "Download for macOS (Apple Silicon)";
+                    subText = "Optimized for M1/M2/M3/M4 chips • .dmg";
+                } else {
+                    link = RELEASES.macIntel;
+                    btnText = "Download for macOS (Intel)";
+                    subText = "For older Intel Macs • .dmg";
+                }
+            } 
+            // Détection Linux
+            else if (/linux/i.test(platform) && !/android/i.test(userAgent)) {
+                os = "Linux";
+                link = RELEASES.linux;
+                btnText = "Download for Linux";
+                subText = "Ubuntu/Debian • .deb package";
+            }
+
+            // Mise à jour de l'UI
+            btn.href = link;
+            btn.textContent = btnText;
+            sub.textContent = subText;
+        });
+    </script>
+</body>
+</html>
