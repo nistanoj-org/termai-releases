@@ -1,7 +1,7 @@
 # TermAI - Le Client SSH augmenté avec l'IA
 
-[![Version](https://img.shields.io/badge/version-1.1.4-blue)](https://github.com/NikoStano/termai/releases) 
-[![Tests](https://img.shields.io/badge/tests-498%2F498-green)]() 
+[![Version](https://img.shields.io/badge/version-1.1.6-blue)](https://github.com/NikoStano/termai/releases) 
+[![Tests](https://img.shields.io/badge/tests-500%2F500-green)]() 
 [![Build](https://img.shields.io/badge/build-passing-brightgreen)]() 
 [![License](https://img.shields.io/badge/license-MIT-blue)](#license)
 
@@ -33,23 +33,7 @@ powershell -Command "irm https://raw.githubusercontent.com/Quantum-Shift-app/ter
 
 ### Téléchargement direct
 
-Rendez-vous sur la [page Releases](https://github.com/Quantum-Shift-app/termai-releases/releases/latest) pour télécharger le binaire adapté à votre plateforme :
-
-| Plateforme | Fichier |
-| --- | --- |
-| Linux arm64 | `termai-linux-arm64.tar.gz` |
-| Linux amd64 | `termai-linux-amd64.tar.gz` |
-| Linux amd64 (.deb) | `termai-linux-amd64.deb` |
-| Linux amd64 (AppImage) | `termai-linux-amd64.AppImage` |
-| macOS Intel | `termai-darwin-amd64.zip` |
-| macOS Apple Silicon | `termai-darwin-arm64.zip` |
-| Windows amd64 (portable) | `termai-windows-amd64.zip` |
-| Windows amd64 (installer) | `termai-windows-amd64-setup.exe` |
-| Windows arm64 (installer) | `termai-windows-arm64-setup.exe` |
-| Windows 386 (portable) | `termai-windows-386.zip` |
-
-**Architectures non supportées** ⚠️ :
-- **Linux 386** : Conflit de dépendances système irrésolvable
+Rendez-vous sur la [page Releases](https://nistanoj-org.github.io/termai-releases/)
 
 ---
 
