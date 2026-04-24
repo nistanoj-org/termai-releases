@@ -3,7 +3,7 @@
 # Usage: curl -fsSL https://raw.githubusercontent.com/Quantum-Shift-app/termai-releases/main/install.sh | sh
 set -e
 
-REPO="Quantum-Shift-app/termai-releases"
+REPO="nistanoj/termai-releases"
 APP_NAME="termai"
 VERSION=""
 INSTALL_DIR="/usr/local/bin"
