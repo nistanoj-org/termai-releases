@@ -1,6 +1,6 @@
 #!/bin/sh
 # TermAI - Installateur Linux/macOS via curl
-# Usage: curl -fsSL https://raw.githubusercontent.com/Quantum-Shift-app/termai-releases/main/install.sh | sh
+# Usage: curl -fsSL https://raw.githubusercontent.com/nistanoj-org/termai-releases/main/install.sh | sh
 set -e
 
 REPO="nistanoj/termai-releases"
